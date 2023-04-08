@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+@font-face {
+    font-family: "digital-7";
+    src: url(digital-7.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 9.5px;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    background-color: #d2dae2;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+.container{
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #2e2d2d;
+    background-color: #2f3542;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 20px;
+}
+.week,
+.month{
+    width: 37rem;
+    height: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+    color: #4b4b4b;
+}
+.week span,
+.month span{
+    padding: 0.2rem;
+}
+.week .activeweek{
+    color: #fff200 !important;
+}
+.month .activemonth{
+    color: #fff200 !important;
+}
+
+.time{
+    width: 35rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    font-family: "digital-7";
+    color: #05c46b;
+}
+.h,
+.m,
+.s,
+.colon,
+.meridean span{
+    font-family: "digital-7";
+}
+.meridean span{
+    display: block;
+    font-size: 2.8rem;
+    width: 2.8rem;
+    align-items: center;
+    margin-left: 0.4rem;
+    color: rgba(5, 196, 107,0.04);
+}
+.meridean .active{
+    color: rgb(5, 196, 107);
+}
+
+.num{
+    width:3.5rem;
+    height: 7rem;
+    position: relative;
+    text-align: right;
+}
+.num::after{
+    content: "0";
+    position: absolute;
+    top:0;
+    right: 0;
+    color: rgba(5, 196, 107,0.04);
+}
+.colon{
+    animation: prime 0.7s ease infinite;
+}
+
+@keyframes prime {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.date{
+    color: #ff3838;
+    margin-bottom: 0.4rem;
+    margin-top: 0.2rem;
+    font-weight: bold;
+    font-size: 2.4rem;
+    font-family: "digital-7";
+}
+
+@media (min-width:567px) {
+    html{
+        font-size: 14px;
+    }
+}
+@media (min-width:992px) {
+    html{
+        font-size: 16px;
+    }
+}
+@media (min-width:1200px) {
+    html{
+        font-size: 18px;
+    }
+}
